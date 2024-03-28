@@ -45,7 +45,15 @@ class DataController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = self::getData();
+
+        // 파라미터로 받은 id를 배열로 만들고, 
+        // 만든 배열 중에 id가 몇번째에 있는지 찾아 인덱스 값을 명확하게 찾는다.
+        $index = array_search($id, array_column($data, 'id'));
+
+        return view('data.show', [
+            'data' => $data[$index]
+        ]);
     }
 
     /**
