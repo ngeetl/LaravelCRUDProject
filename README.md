@@ -13,3 +13,7 @@
 - array_search('찾을값', 대상배열): 찾는 대상이 몇번 째에 있는지
 - arry_column(배열, '컬럼명'): 컬럼명으로 새로운 배열을 만듦
 - route()로 컨트롤러의 액션을 실행시키고 id 파라미터를 넘김
+- Route::resource를 사용하는 경우, 리소스 이름을 기반으로 파라미터 이름을 자동으로 결정
+
+## 4/2
+- "php artisan make:model Model --migration"
