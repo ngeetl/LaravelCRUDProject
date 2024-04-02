@@ -5,7 +5,7 @@
 @if (count($data) > 0)
 @foreach ($data as $person)
 <div>
-    <a href="{{ route('data.show', ['id'=>$person['id']]) }}"><h3>{{ $person['name'] }}</h3></a>
+    <a href="{{ route('data.show', ['data'=>$person['id']]) }}"><h3>{{ $person['name'] }}</h3></a>
     <p>{{ $person['age'] }}</p>
 </div>
 @endforeach
