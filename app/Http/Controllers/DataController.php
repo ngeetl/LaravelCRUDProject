@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Data;
 
 class DataController extends Controller
 {
@@ -30,6 +31,7 @@ class DataController extends Controller
     public function create()
     {
         //
+        return view('data.create');
     }
 
     /**
@@ -37,7 +39,17 @@ class DataController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Data 모델을 이용해서, db 연결하고 그 결과를 객체로 저장
+        $data = new Data();
+
+        // form으로 전송받은 데이터 저장
+        $data->name = $request -> input['name'];
+        $data->age = $request -> input['age'];
+
+        // DB에 저장
+        $data->save();
+
+        return redirect()->route('data.index');
     }
 
     /**

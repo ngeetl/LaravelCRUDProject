@@ -17,3 +17,4 @@
 
 ## 4/2
 - "php artisan make:model Model --migration"
+- 데이터베이스 연결 설정은 ".env", "config/database.php"
