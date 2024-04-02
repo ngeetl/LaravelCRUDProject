@@ -20,7 +20,8 @@ class DataController extends Controller
     public function index()
     {
         return view('data.index', [
-            'data' => self::getData(),
+            // 'data' => self::getData(),
+            'data' => Data::all(),
             'result' => '성공' 
         ]);
     }
@@ -43,8 +44,8 @@ class DataController extends Controller
         $data = new Data();
 
         // form으로 전송받은 데이터 저장
-        $data->name = $request -> input['name'];
-        $data->age = $request -> input['age'];
+        $data->name = $request->input('name');
+        $data->age = $request->input('age');
 
         // DB에 저장
         $data->save();

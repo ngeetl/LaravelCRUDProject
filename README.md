@@ -17,4 +17,6 @@
 
 ## 4/2
 - "php artisan make:model Model --migration"
+- "php artisan migrate"
 - 데이터베이스 연결 설정은 ".env", "config/database.php"
+- @csrf 지시어로 HTML 폼 내에 숨겨진 입력 필드를 생성하고 세션에 CSRF 토큰이 포함시켜 Cross-Site Request Forgery (CSRF) 공격을 방지

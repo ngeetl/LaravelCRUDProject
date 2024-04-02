@@ -3,7 +3,8 @@
 @section('content')
 
 <div>
-    <form action="" method="POST">
+    <form action="{{ route('data.store') }}" method="POST">
+        @csrf
         <div>
             <label for="name">이름</label>
             <input type="text" id="name" name="name">
